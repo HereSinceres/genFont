@@ -10,7 +10,7 @@ Features:
 - fontName [必填]
 - quirks [可选] 百科专用（主要是设置codePoint区别（为了兼容老项目配置），如果是新项目可以忽略）
 ```
-npx gen-font --src ./svgs --fontName font-ui quirks  
+npx gen-font --src ./svgs --fontName font-ui --quirks  
 ```
 
 执行命令之后会在命令执行目录生成一个temp文件，里面有字体demo

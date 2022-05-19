@@ -1,6 +1,6 @@
 {
     "name": "gen-font",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "license": "MIT",
     "bin": {
         "gen-font": "bin/index.js"
@@ -12,6 +12,7 @@
         "prettier": "^2.6.2"
     },
     "scripts": {
+        "test": "node bin/index.js --src ./demo/svgs --fontName font-ui-icons --quirks",
         "pub": "npm publish --registry=https://registry.npmjs.org"
     },
     "dependencies": {
