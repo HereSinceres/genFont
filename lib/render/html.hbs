@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>{{fontName}}</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 10px 20px;
+		}
+
+		@font-face {
+			font-family: '{{fontName}}';
+			src: url('{{fontName}}.eot'); /* IE9 */
+			src: url('{{fontName}}.eot?#iefix') format('embedded-opentype'),   /* IE6-IE8 */
+				url('{{fontName}}.woff2') format('woff2'),
+				url('{{fontName}}.woff') format('woff'),
+				url('{{fontName}}.ttf') format('truetype'),    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+				url('{{fontName}}.svg#{{fontName}}') format('svg');  /* iOS 4.1- */
+		}
+	
+		.{{fontName}} {
+			padding: 6px;
+			background: #DDD;
+			border: solid 3px #DDD;
+			border-radius: 2px;
+			cursor: pointer;
+			margin-bottom: 4px;
+			display: inline-block;
+		}
+	
+   	    .{{fontName}} {
+			font-family: '{{fontName}}';
+			font-weight: normal;
+			font-style: normal;
+			font-size: 16px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		{{#each rawSvgArray}}
+			.{{../fontName}}_{{this.className}}:before {
+				content: "\\{{this.codePoint16}}";
+			}
+		{{/each}}
+	
+	</style>
+</head>
+
+<body>
+	<h1>{{fontName}}</h1>
+	{{#each rawSvgArray}}
+	 	<span class="{{../fontName}} {{../fontName}}_{{this.className}}"></span>
+	{{/each}}
+</body>
+
+</html>
