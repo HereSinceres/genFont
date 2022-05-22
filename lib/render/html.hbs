@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>{{fontName}}</title>
+	<title>{{fontName}} Demo 兼容到ie8</title>
 	<style>
 		body {
 			font-family: sans-serif;
@@ -13,7 +13,7 @@
 
 		@font-face {
 			font-family: '{{fontName}}';
-			src: url('{{fontName}}.eot'); /* IE9 */
+			src: url('{{fontName}}.eot?#iefix'); /* IE9 */
 			src: url('{{fontName}}.eot?#iefix') format('embedded-opentype'),   /* IE6-IE8 */
 				url('{{fontName}}.woff2') format('woff2'),
 				url('{{fontName}}.woff') format('woff'),
@@ -41,6 +41,9 @@
 		}
 
 		{{#each rawSvgArray}}
+			.{{../fontName}}_{{this.className}} {
+				 *zoom: expression(this.runtimeStyle["zoom"] = "1",this.innerHTML += "&#x{{this.codePoint16}};");
+			}
 			.{{../fontName}}_{{this.className}}:before {
 				content: "\\{{this.codePoint16}}";
 			}

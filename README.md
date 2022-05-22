@@ -4,6 +4,8 @@
 
 Features:
 - Supported font formats: WOFF2, WOFF, EOT, TTF and SVG.
+- eot 兼容到ie8 可以使用class 访问
+- eot 兼容到ie5 但是需要使用uniode 不建议使用
 
 参数说明
 - src [必填] svg存放的目录 svg文件命名格式 001-close.svg  001代表顺序，为了保证生成的字体的unicode可控
