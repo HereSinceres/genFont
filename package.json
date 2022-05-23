@@ -1,7 +1,8 @@
 {
     "name": "gen-font",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "license": "MIT",
+    "homepage": "https://github.com/HereSinceres/genFont",
     "bin": {
         "gen-font": "bin/index.js"
     },
