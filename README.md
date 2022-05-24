@@ -2,6 +2,8 @@
 
 使用svg 生成字体文件
 
+\>= Node 12
+
 Features:
 - Supported font formats: WOFF2, WOFF, EOT, TTF and SVG.
 - eot 兼容到ie8 可以使用class 访问
