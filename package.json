@@ -1,6 +1,6 @@
 {
     "name": "gen-font",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "license": "MIT",
     "homepage": "https://github.com/HereSinceres/genFont",
     "bin": {
@@ -18,8 +18,6 @@
     },
     "dependencies": {
         "argv-parse": "^1.0.1",
-        "fis-parser-baike-less": "^0.12.5",
-        "handlebars": "^4.7.7",
         "svg2ttf": "^6.0.3",
         "svgicons2svgfont": "^10.0.6",
         "svgo": "^2.8.0",
