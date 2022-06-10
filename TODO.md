@@ -38,3 +38,5 @@
     optimizedSvg: '', // 优化之后的svg，生成字体使用优化之后的svg
 }
 ```
+
+- 使用 pipeline
